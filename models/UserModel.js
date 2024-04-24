@@ -1,10 +1,10 @@
 const mongoose=require('mongoose')
 const UserSchema=new mongoose.Schema({
     name:{
-        type:[String,"invail name"]
+        type:[String,"invalid name"]
     },
     phone:{
-        type:[Number,"invail numbergfddf"]
+        type:[Number,"invalid number"]
     },
     email:String,
     password:String
