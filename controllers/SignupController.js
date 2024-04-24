@@ -4,7 +4,7 @@ SignupContoller = (req, res) => {
   let signupsubmited;
   switch (status) {
     case "1":
-      signupsubmited = "success";
+      signupsubmited = "success click Login ";
       break;
     case "2":
       signupsubmited = "failed";
