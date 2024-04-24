@@ -1,0 +1,50 @@
+<%-include('layouts/header.ejs') %>
+<section>
+  <h1 class="text-center my-4">Login Here! / <a href="/signup" class="link text-decoration-none text-dark link-danger">Signup Page</a></h1>
+  <% if(loginsumitted){ %>
+  <div class="row d-flex justify-content-center container-fluid">
+    <div class="col col-lg-6">
+      <div class="alert alert-danger alert-dismissible">
+        <%= message %>
+        <div class="btn btn-close" data-bs-dismiss="alert"></div>
+      </div>
+    </div>
+  </div>
+  <%}%>
+  <div class="row container-fluid d-flex justify-content-center">
+    <div class="col col-lg-6">
+      <form action="/login" method="post" class="">
+        <div class="input-group mb-3">
+          <label for="email" class="input-group-text bg-secondary">Email</label>
+          <div class="form-floating">
+            <input
+              type="text"
+              name="email"
+              id=""
+              class="form-control border-secondary"
+              placeholder=" "
+            />
+            <label for="">Enter your Email</label>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <label for="password" class="input-group-text bg-secondary"
+            >Password</label
+          >
+          <div class="form-floating">
+            <input
+              type="text"
+              name="password"
+              id=""
+              class="form-control border-secondary"
+              placeholder=" "
+            />
+            <label for="">Enter your Password</label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-outline-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+<%-include('layouts/footer.ejs') %>

@@ -1,0 +1,86 @@
+<%-include('layouts/header.ejs') %>
+<section>
+  <h1 class="text-center my-4">Signup Here! / <a href="/login" class="link-danger text-decoration-none text-dark">Login Page</a></h1>
+  <% if(signupsubmited=="success"){ %>
+  <div class="row d-flex justify-content-center container-fluid">
+    <div class="col col-lg-6">
+      <div class="alert alert-success alert-dismissible">
+        Signup Successfully!
+        <div class="btn btn-close" data-bs-dismiss="alert"></div>
+      </div>
+    </div>
+  </div>
+  <% } %> <% if(signupsubmited=="failed") { %>
+  <div class="row d-flex justify-content-center container-fluid">
+    <div class="col col-lg-6">
+      <div class="alert alert-danger alert-dismissible">
+        Signup Failed!
+        <div class="btn btn-close" data-bs-dismiss="alert"></div>
+      </div>
+    </div>
+  </div>
+  <% } %>
+  <div class="row container-fluid d-flex justify-content-center">
+    <div class="col col-lg-6">
+      <form action="/signup" method="POST" class="">
+        <div class="input-group mb-3">
+          <label for="name" class="input-group-text bg-secondary">Name</label>
+          <div class="form-floating">
+            <input
+              type="text"
+              name="name"
+              id=""
+              class="form-control border-secondary"
+              placeholder=" "
+            />
+
+            <label for="">Enter your Name</label>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <label for="phone" class="input-group-text bg-secondary">Phone</label>
+          <div class="form-floating">
+            <input
+              type="text"
+              name="phone"
+              id=""
+              class="form-control border-secondary"
+              placeholder=" "
+            />
+            <label for="">Enter your Phone</label>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <label for="email" class="input-group-text bg-secondary">Email</label>
+          <div class="form-floating">
+            <input
+              type="text"
+              name="email"
+              id=""
+              class="form-control border-secondary"
+              placeholder=" "
+            />
+            <label for="">Enter your Email</label>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <label for="password" class="input-group-text bg-secondary"
+            >Password</label
+          >
+          <div class="form-floating">
+            <input
+              type="text"
+              name="password"
+              id=""
+              class="form-control border-secondary"
+              placeholder=" "
+            />
+            <label for="">Enter your Password</label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-outline-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+<%-include('layouts/footer.ejs') %>
